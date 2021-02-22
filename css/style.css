@@ -1,0 +1,19 @@
+table {
+    
+    border-spacing: 20px;
+    border-collapse: separate;
+}
+
+td:nth-child(odd),th:nth-child(odd)
+{
+    color:red;
+}
+
+td:nth-child(even),th:nth-child(even)
+{
+    color:green;
+}
+th,td{
+    text-align: center;
+}
+
