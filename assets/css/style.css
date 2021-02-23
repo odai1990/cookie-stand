@@ -2,6 +2,7 @@ table {
     
     border-spacing: 20px;
     border-collapse: separate;
+
 }
 
 td:nth-child(odd),th:nth-child(odd)
@@ -17,3 +18,22 @@ th,td{
     text-align: center;
 }
 
+
+
+header
+{
+    text-align: center;
+}
+body{
+    background-color: #611818;
+}
+h2{
+    font-family: 'RocknRoll One', sans-serif;
+}
+ul{
+    font-family: 'Akaya Kanadaka', cursive;
+}
+img{
+    width: 200px;
+    height: 200px;
+}

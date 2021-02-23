@@ -1,11 +1,6 @@
 'use strict';
 
 
-
-'use strict';
-
-
-
 let apeddObject = [];
 let primaryTable = document.createElement('table');
 let MainObject = function (name, minC, maxC, avg) {
@@ -117,3 +112,7 @@ paris.renderBody();
 lima.cookiesAverage();
 lima.renderBody();
 lima.renderTotal();
+
+
+
+
