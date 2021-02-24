@@ -13,8 +13,40 @@
     <a href="../index.html">Home</a>
 </nav>
     </header>
+<main>
+<section>
+    <fieldset>
+        <legend for='formNew'>Adding New Location</legend>
+        <form action="" method="get" id='formNew'>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" >
+            <label for="Min_Customer">Min Customer</label>
+            <input type="number" name="Min_Customer" id="Min_Customer" ><br/>
+            <label for="Max_Customer">Max Customer</label>
+            <input type="number" name="Max_Customer" id="Max_Customer" >
+            <label for="Avrage">Avrage</label>
+            <input type="number" name="Avrage" id="Avrage"  value="0" readonly>
+            <br/>
+            <br/>
+            <input type="submit" value="Submit" id='Submit'>
+
+        </form>
+    </fieldset>
+    <p>
+        <ul>
+            <li>This program calculate average automatically.</li>
+            <li>This program Do not allow you to repeat location names.</li>
+           
+        </ul>
+    </p>
+</section>
 
     <section id="root"></section>
+</main>
+   
+<footer>
+
+</footer>
     <script src="../assets/js/app.js"></script>
 </body>
 </html>
