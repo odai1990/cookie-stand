@@ -18,7 +18,7 @@ let addEventToForm = function () {
 
     function checkAdult(data) {
       console.log(data.name === formName);
-      return data.name === formName;
+      return data.name.toLowerCase() === formName.toLowerCase();
     }
     let flag = apeddObject.find(checkAdult);
 
