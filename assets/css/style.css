@@ -37,3 +37,44 @@ img{
     width: 200px;
     height: 200px;
 }
+
+form
+{
+    color:white;
+}
+main section:nth-child(1)
+{
+    text-align: center;
+}
+
+
+main form input
+{
+    border: 4px solid wheat;
+    background-color: wheat;
+    width: 25%;
+    padding: 2px 0px;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 8px;
+}
+
+main form input[type=submit]
+{
+    border: 4px solid wheat;
+    background-color: wheat;
+    width: 25%;
+    padding: 3px 0px;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 7px;
+}
+
+main form label
+{
+  
+
+ 
+    font-size: 15px;
+    font-weight: 800;
+}
