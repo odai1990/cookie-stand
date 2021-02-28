@@ -7,7 +7,7 @@ let formSubmition = document.querySelector('#formNew');
 
 
 
-
+//addEventToForm is for add event ot form and checking min,max,name not empty 
 let addEventToForm = function () {
   formSubmition.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -38,8 +38,11 @@ let addEventToForm = function () {
 
     }
   });
-};
+};// end of addEventToForm
 
+
+
+// addEventToInputToClucolateVarge is to get avarage from min and max
 let addEventToInputToClucolateVarge = function () {
   formSubmition.addEventListener('input', function (event) {
     event.preventDefault();
@@ -55,10 +58,10 @@ let addEventToInputToClucolateVarge = function () {
       formAvrage.value = 0;
     }
   });
-};
+};// end of addEventToInputToClucolateVarge
 
 
-
+// this is constructor
 let MainObject = function (name, minC, maxC, avg) {
   this.name = name;
   this.minC = minC;
@@ -68,9 +71,10 @@ let MainObject = function (name, minC, maxC, avg) {
   this.hoursVailability = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
   this.totalCookie = 0;
   this.rootSource = document.getElementById('root');
-  // apeddObject.push(this);
-};
+};// end of constructor 
 
+
+//cookiesPerHour for calcoulating houres for cookies
 MainObject.prototype.cookiesPerHour = function () {
   return Math.floor(Math.floor(Math.random() * (this.maxC - this.minC + 1) + this.minC) * this.avg);
 };
@@ -82,8 +86,10 @@ MainObject.prototype.cookiesAverage = function () {
     this.totalCookie += temp;
 
   }
-};
+};// end of cookiesPerHour
 
+
+//renderHeader is responsable for show header for table 
 MainObject.prototype.renderHeader = function () {
 
   primaryTable.setAttribute('id', 'idToDelete');
@@ -102,8 +108,9 @@ MainObject.prototype.renderHeader = function () {
   cellHeader.textContent = 'Daily Location Total';
   headerTable.appendChild(cellHeader);
 
-};
+};// end of renderHeader
 
+//renderBody is responsable for add content of table, in other words to add location and cookies for houres 
 MainObject.prototype.renderBody = function () {
   let bodyTable = document.createElement('tr');
   this.rootSource.appendChild(primaryTable);
@@ -119,15 +126,15 @@ MainObject.prototype.renderBody = function () {
   cellBody = document.createElement('td');
   bodyTable.appendChild(cellBody);
   cellBody.textContent = (this.totalCookie);
-};
+};// end of renderBody
 
 
 
 
-
+//renderTotal is responsable to calculate totale for each houre in all location in addation to total of all hours
 MainObject.prototype.renderTotal = function () {
   let footerTable = document.createElement('tr');
-  footerTable.setAttribute('id', 'fordelete')
+  footerTable.setAttribute('id', 'fordelete');
   primaryTable.appendChild(footerTable);
   let cellFooter = document.createElement('th');
   footerTable.appendChild(cellFooter);
@@ -149,20 +156,24 @@ MainObject.prototype.renderTotal = function () {
     cellFooter.textContent = tempHolder;
   }
 
-};
+};// end of renderTotal
 
+
+
+
+//assginObject to assgin old object
 let assginObject = function () {
-
-
   apeddObject.push(new MainObject('Seattle', 23, 65, 6.3));
   apeddObject.push(new MainObject('Tokyo', 3, 24, 1.2));
   apeddObject.push(new MainObject('Dubai', 11, 38, 3.7));
   apeddObject.push(new MainObject('Paris', 20, 38, 2.3));
   apeddObject.push(new MainObject('Lima', 2, 16, 4.6));
 
-};
-let readLocationAndDispaly = function () {
+};//end of assginObject
 
+
+//readLocationAndDispaly to despilay all store bojects in array to html
+let readLocationAndDispaly = function () {
 
   for (let i = 0; i < apeddObject.length; i++) {
     if (i === 0) {
@@ -181,14 +192,17 @@ let readLocationAndDispaly = function () {
 
 
   }
-};
+};// end of readLocationAndDispaly
+
+
+//readLocationAndDispalyForDynamic is for display locaton that user insert in run time
 let readLocationAndDispalyForDynamic = function (index) {
 
   apeddObject[index].cookiesAverage();
   apeddObject[index].renderBody();
   apeddObject[index].renderTotal();
 
-};
+};// end of readLocationAndDispalyForDynamic
 
 
 
